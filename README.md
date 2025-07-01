@@ -40,43 +40,43 @@ Total Portfolio Capital (sum of premiums): $1151.00
 
 
 **Current Dir Tree:**  
-breaches_forecasting # signal generation and portfolio management for options allocation
-├── back_testing
-│   ├── batch_backtest_analyzer.ipynb (BBA)
-│   └── generate_forecast_output.ipynb (GFO)
-├── db # historical data tables
-│   ├── ARKG.parquet
-│   ├── ARKK.parquet
-│   ├── ...
-│   └── YINN.parquet
-├── parked # dev code and code that isn't currently used in production
-├── project_management # research, docs and prompts
-├── results
-│   ├── original_pipeline # folder with ticker level back test data from GFO
-│   │   ├── ARKG_L2-8y_CP0p010p050p1_SMam.parquet
-│   │   ├── ARKK_L2-8y_CP0p010p050p1_SMam.parquet
-│   │   ├── ...
-│   │   └── YINN_L2-8y_CP0p010p050p1_SMam.parquet
-│   ├── batch_sweep_analysis.csv # table with BBA output
-│   ├── current_breaches.csv # output from BS
-│   ├── current_breached_tickers.txt # output from MSF (Webull format for watchlist)
-│   └── daily_screener_output.csv # output from MSF (Webull format for watchlist)
-├── src
-│   ├── __pycache__
-│   ├── env
-│   │   └── .env
-│   ├── __init__.py 
-│   ├── data_handler.py (DH) # defines api handlers for EODHD and Yfinance
-│   ├── data_manager.py (DM) # ingesting and storing of data
-│   ├── forecast.py (FCST) # Prophet forecast used in back testing etc.
-│   ├── visualization.py (VIZ) # viz for (EF)
-│   └── ticker_betas.csv # ticker betas for Greek calculations
-├── webull_trade_data
-│   ├── trade_analyzer.ipynb (TA) # reviews past trade data and generates P/L
-│   └── Broker_Orders_Records_Options.csv 
+breaches_forecasting # signal generation and portfolio management for options allocation  
+├── back_testing  
+│   ├── batch_backtest_analyzer.ipynb (BBA)  
+│   └── generate_forecast_output.ipynb (GFO)  
+├── db # historical data tables  
+│   ├── ARKG.parquet  
+│   ├── ARKK.parquet  
+│   ├── ...  
+│   └── YINN.parquet  
+├── parked # dev code and code that isn't currently used in production  
+├── project_management # research, docs and prompts  
+├── results  
+│   ├── original_pipeline # folder with ticker level back test data from GFO  
+│   │   ├── ARKG_L2-8y_CP0p010p050p1_SMam.parquet  
+│   │   ├── ARKK_L2-8y_CP0p010p050p1_SMam.parquet  
+│   │   ├── ...  
+│   │   └── YINN_L2-8y_CP0p010p050p1_SMam.parquet  
+│   ├── batch_sweep_analysis.csv # table with BBA output  
+│   ├── current_breaches.csv # output from BS  
+│   ├── current_breached_tickers.txt # output from MSF (Webull format for watchlist)  
+│   └── daily_screener_output.csv # output from MSF (Webull format for watchlist)  
+├── src  
+│   ├── __pycache__  
+│   ├── env  
+│   │   └── .env  
+│   ├── __init__.py   
+│   ├── data_handler.py (DH) # defines api handlers for EODHD and Yfinance  
+│   ├── data_manager.py (DM) # ingesting and storing of data  
+│   ├── forecast.py (FCST) # Prophet forecast used in back testing etc.  
+│   ├── visualization.py (VIZ) # viz for (EF)  
+│   └── ticker_betas.csv # ticker betas for Greek calculations  
+├── webull_trade_data  
+│   ├── trade_analyzer.ipynb (TA) # reviews past trade data and generates P/L  
+│   └── Broker_Orders_Records_Options.csv   
 └── workbooks
-    ├── allocation_optimizer.ipynb (AO) # two stage optimizer for portfolio structuring
-    ├── daily_screener.ipynb (DS) # daily/weekly screener, identifying breaches and 300d forecasts.
-    ├── cross_sectional_analysis.ipynb (CSA) # secondary filter for breaches that removes the most highly correlated and those with lowest point potential
-    ├── greek_calculations.ipynb (GC) # first and second order calculations for the AO
-    └── manual_screen_filter.ipynb (MSF) # initial OI filter (manual check) of current breaches
+    ├── allocation_optimizer.ipynb (AO) # two stage optimizer for portfolio structuring  
+    ├── daily_screener.ipynb (DS) # daily/weekly screener, identifying breaches and 300d forecasts.  
+    ├── cross_sectional_analysis.ipynb (CSA) # secondary filter for breaches that removes the most highly correlated and those with lowest point potential  
+    ├── greek_calculations.ipynb (GC) # first and second order calculations for the AO  
+    └── manual_screen_filter.ipynb (MSF) # initial OI filter (manual check) of current breaches  
